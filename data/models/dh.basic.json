@@ -1,0 +1,15 @@
+{
+	"description": "A basic Demon Hunter stat entity to be used for modelling",
+	"name": "basic_DH",
+	"level": "110",
+	"stats": {
+		"agility":"16630",
+		"critical_strike": "5000",
+		"haste": "5000",
+		"mastery": "5000",
+		"versatility": "5000",
+		"attack_power": "16630",
+		"spell_power": "0"
+	}
+
+}

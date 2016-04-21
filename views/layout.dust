@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{title} - FelCraft</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
+    <link rel="stylesheet" href="/css/felcraft.min.css" />
+  </head>
+  <body>
+    {+body /}
+    <img id="app-bg-load" src='/img/bg.png' style='display:none;' />
+
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/lazyload.min.js"></script>
+    <script src="/js/load.js" id="app-loading-script"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{>"layout" /}
+{<body}
+    <div id="fc-container">
+      <div id="fc-background">
+        <div id="content">
+          <div id="app-loader">
+            <div id="app-loading-messages"></div>
+            <div id="app-loading-progress">
+                <div id="app-loading-progress-bar" />
+            </div>
+            </div>
+         </div>
+       </div>
+    </div>
+{/body}
