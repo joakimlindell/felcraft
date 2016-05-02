@@ -10,8 +10,13 @@ require('./config/express')(app);
 var commonController = require('./controllers/common');
 var characterController = require('./controllers/character');
 
-// Register Routes
+/* ROUTES  */
+
+// Common
 app.get('/', commonController.index);
+
+// Character Routes
+app.get('/character/verify', characterController.verifyExists);
 
 app.listen(app.get('port'), function() {
   console.log('FelCraft Running on ' + app.get('port'));

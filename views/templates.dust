@@ -1,13 +1,16 @@
 <script id="charTemplate" type="text/template">
-    <ul>
+    <ul style="color: #FFF">
         <li>
-            <%= region %>
+           Region: <%= region %>
         </li>
         <li>
-            <%= server %>
+            Server: <%= server %>
         </li>
         <li>
-            <%= name %>
+            Name: <%= name %>
+        </li>
+        <li>
+           Verified: <%= isVerified %>
         </li>
     </ul>
 </script>
