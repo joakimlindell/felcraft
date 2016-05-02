@@ -1,0 +1,69 @@
+<script id="charTemplate" type="text/template">
+    <ul>
+        <li>
+            <%= region %>
+        </li>
+        <li>
+            <%= server %>
+        </li>
+        <li>
+            <%= name %>
+        </li>
+    </ul>
+</script>
+<!-- NEW CHAR SPLASH TEMPLATE -->
+<script id="newCharSplash" type="text/template">
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
+            <div class="col-md-6 welcomeText">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+                <p>
+                    When an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <p>
+                    <small>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    <form class="m-t" role="form" action="index.html">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Character Name" required="true">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Server" required="true">
+                        </div>
+                        <div class="form-group">
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                                <label for="inlineRadio1"> EU </label>
+                            </div>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                                <label for="inlineRadio2"> NA </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Get Started!</button>
+                        <p class="text-muted text-center">
+                            <small><a href="#">Wanna help make FelCraft more awesome?</a></small>
+                        </p>
+                    </form>
+                    <p class="m-t">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr style="border-top: 1px solid #1AB394">
+        <div class="row">
+            <div class="col-md-6">
+                FelCraft Engine Build v0.0.1 (May 2016)
+            </div>
+            <div class="col-md-6 text-right charSplashLinks">
+                <small><a href="#" style="color: #1AB394">#Mardum</a> | <a href="#" style="#1AB394">View Source</a> </small>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- NEW CHAR SPLASH TEMPLATE ENDS -->

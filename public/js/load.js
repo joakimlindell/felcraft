@@ -1,8 +1,15 @@
 window.loadFiles = [];
 window.loadFiles.push(
     // Deps
-    '/js/lib/bootstrap.min.js'
-    );
+    '/js/lib/bootstrap.min.js',
+    '/js/lib/underscore.min.js',
+    '/js/lib/backbone.min.js',
+    /* FelCraft Application Files */
+    // Core
+    '/js/lib/felcraft-core.min.js',
+    // Compiled
+    '/js/lib/felcraft-bb.min.js'
+);
 window.startApp = function() { console.error('Oops! No application got loaded!') };
 (function(LazyLoad, files) {
     var len = files.length - 1;
@@ -65,6 +72,21 @@ window.startApp = function() { console.error('Oops! No application got loaded!')
             document.getElementById('fc-background').style.opacity = 1;
             //loadjscssfile("/css/style.css","css");  // Temporary CSS injection
 
+            /* INITIALIZE FRONTEND */
+            var FelCraft = new window.FC();
+                $(this).remove();
+                _.extend(window, { FCI: FelCraft });
+
+                // Init the JC Instance
+                FelCraft.init({ CDN: '/test', main_ele: '#content' });
+
+                /* Debug logging */
+                console.log('Views', FelCraft.view_definitions);
+                console.log('Models', FelCraft.model_definitions);
+                console.log('Collections', FelCraft.collection_definitions);
+                console.log('FC Object', FelCraft);
+
+
             window.setTimeout(function() {
                 document.body.style.overflow = 'auto';
                 loader.remove();
@@ -86,21 +108,20 @@ window.startApp = function() { console.error('Oops! No application got loaded!')
     };
 
     var loadjscssfile = function(filename, filetype) {
-                if (filetype == "js") {
-                    var fileref = document.createElement('script')
-                    fileref.setAttribute("type", "text/javascript")
-                    fileref.setAttribute("src", filename)
-                    alert('called');
-                }
-                else if (filetype == "css") {
-                    var fileref = document.createElement("link")
-                    fileref.setAttribute("rel", "stylesheet")
-                    fileref.setAttribute("type", "text/css")
-                    fileref.setAttribute("href", filename)
-                }
-                if (typeof fileref != "undefined")
-                    document.getElementsByTagName("head")[0].appendChild(fileref)
-            }
+        if (filetype == "js") {
+            var fileref = document.createElement('script')
+            fileref.setAttribute("type", "text/javascript")
+            fileref.setAttribute("src", filename)
+            alert('called');
+        } else if (filetype == "css") {
+            var fileref = document.createElement("link")
+            fileref.setAttribute("rel", "stylesheet")
+            fileref.setAttribute("type", "text/css")
+            fileref.setAttribute("href", filename)
+        }
+        if (typeof fileref != "undefined")
+            document.getElementsByTagName("head")[0].appendChild(fileref)
+    }
 
     var getMessage = function() {
         return loadingMessages.splice(Math.floor(Math.random() * loadingMessages.length), 1);

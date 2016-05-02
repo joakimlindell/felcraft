@@ -14,5 +14,7 @@
     <script src="/js/lib/jquery.min.js"></script>
     <script src="/js/lib/lazyload.min.js"></script>
     <script src="/js/load.js" id="app-loading-script"></script>
+
+    {>"templates"/}
   </body>
 </html>
