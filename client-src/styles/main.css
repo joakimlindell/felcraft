@@ -100,7 +100,7 @@
  }
 
 .charSplashLinks a {
-    color: #1AB394;
+    color: #a330c9;
 }
 
 .charSplashLinks a:hover {
@@ -339,13 +339,13 @@
 }
 
 .radio-success input[type="radio"] + label::after {
-  background-color: #1AB394;
+  background-color: #a330c9;
 }
 .radio-success input[type="radio"]:checked + label::before {
-  border-color: #1AB394;
+  border-color: #a330c9;
 }
 .radio-success input[type="radio"]:checked + label::after {
-  background-color: #1AB394;
+  background-color: #a330c9;
 }
 
 input[type="checkbox"].styled:checked + label:after,
@@ -370,4 +370,29 @@ input[type="radio"] .styled:checked + label::after {
 
 #splashLogo {
     margin-bottom: 15px;
+}
+
+.btn-fel-primary {
+    background-color: #a330c9;
+    border-color: #a330c9;
+    color: #FFF;
+}
+
+.btn-fel-primary:hover,
+.btn-fel-primary:focus,
+.btn-fel-primary:active,
+.btn-fel-primary.active,
+.open .dropdown-toggle.btn-primary,
+.btn-fel-primary:active:focus,
+.btn-fel-primary:active:hover,
+.btn-fel-primary.active:hover,
+.btn-fel-primary.active:focus {
+  background-color: #77029e;
+  border-color: #77029e;
+  color: #FFFFFF;
+}
+.btn-fel-primary:active,
+.btn-fel-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
 }

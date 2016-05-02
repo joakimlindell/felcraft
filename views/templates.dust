@@ -19,6 +19,7 @@
     <div class="loginColumns animated fadeInDown">
         <div class="row">
             <div class="col-md-6 welcomeText">
+                <img src="/img/logo-norm.png" id="splashLogo" />
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
@@ -31,40 +32,60 @@
             </div>
             <div class="col-md-6">
                 <div class="ibox-content">
-                    <form class="m-t" role="form" action="index.html">
+                    <div id="loading-spinner" style="display: none; padding: 25px">
+                        <div class="sk-spinner sk-spinner-rotating-plane" style="margin-top:25px"></div>
+                        <p id="loading-status-msg" style="font-weight:bold; text-align: center; margin-top:25px">Pulling your hero from the Twisting Nether... </p>
+                    </div>
+                    <div id="felcraft-char-form" class="m-t">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Character Name" required="true">
+                            <input type="text" id="felcraft-charname-txt" class="form-control" placeholder="Character Name" required="true">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Server" required="true">
+                            <input type="text" id="felcraft-server-txt" class="form-control" placeholder="Server" required="true">
                         </div>
                         <div class="form-group">
                             <div class="radio radio-success radio-inline">
-                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                                <input type="radio" id="inlineRadio1" value="eu" name="radioInline" checked="">
                                 <label for="inlineRadio1"> EU </label>
                             </div>
                             <div class="radio radio-success radio-inline">
-                                <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                                <input type="radio" id="inlineRadio2" value="na" name="radioInline">
                                 <label for="inlineRadio2"> NA </label>
                             </div>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="inlineRadio3" value="sea" name="radioInline">
+                                <label for="inlineRadio3"> SEA </label>
+                            </div>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="inlineRadio4" value="cn" name="radioInline">
+                                <label for="inlineRadio4"> CN </label>
+                            </div>
+                             <div class="radio radio-success radio-inline">
+                                <input type="radio" id="inlineRadio5" value="kr" name="radioInline">
+                                <label for="inlineRadio5"> KR </label>
+                            </div>
+                               <div class="radio radio-success radio-inline">
+                                <input type="radio" id="inlineRadio6" value="tw" name="radioInline">
+                                <label for="inlineRadio5"> TW </label>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary block full-width m-b">Get Started!</button>
+                        <a id="felcraft-start-btn" class="btn btn-fel-primary block full-width m-b">Get Started!</a>
+                    </div>
                         <p class="text-muted text-center">
                             <small><a href="#">Wanna help make FelCraft more awesome?</a></small>
                         </p>
-                    </form>
                     <p class="m-t">
                     </p>
                 </div>
             </div>
         </div>
-        <hr style="border-top: 1px solid #1AB394">
+        <hr style="border-top: 1px solid #a330c9">
         <div class="row">
             <div class="col-md-6">
                 FelCraft Engine Build v0.0.1 (May 2016)
             </div>
             <div class="col-md-6 text-right charSplashLinks">
-                <small><a href="#" style="color: #1AB394">#Mardum</a> | <a href="#" style="#1AB394">View Source</a> </small>
+                <small><a href="#" style="color: #a330c9">#mardun</a> | <a href="#" style="#a330c9">View Source</a> </small>
             </div>
         </div>
     </div>

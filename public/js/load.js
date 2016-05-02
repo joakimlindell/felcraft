@@ -70,7 +70,7 @@ window.startApp = function() { console.error('Oops! No application got loaded!')
             loader.style.opacity = 0;
             background.style.zIndex = 1;
             document.getElementById('fc-background').style.opacity = 1;
-            //loadjscssfile("/css/style.css","css");  // Temporary CSS injection
+            loadjscssfile("/css/style.css","css");  // Temporary CSS injection
 
             /* INITIALIZE FRONTEND */
             var FelCraft = new window.FC();
