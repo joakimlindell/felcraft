@@ -22,6 +22,7 @@
             $(document).attr('title', this.model.get('name')+"@"+this.model.get('server')+" | FelCraft");
             }
             this.$el.html(this.template(this.model.attributes));
+            initFC();
             return this;
         }
     });

@@ -396,3 +396,11 @@ input[type="radio"] .styled:checked + label::after {
 .open .dropdown-toggle.btn-primary {
   background-image: none;
 }
+
+.navLinks {
+  color: #ccc !important;
+}
+
+.navLinks:hover {
+  color: #FFF !important;
+}

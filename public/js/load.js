@@ -4,6 +4,9 @@ window.loadFiles.push(
     '/js/lib/bootstrap.min.js',
     '/js/lib/underscore.min.js',
     '/js/lib/backbone.min.js',
+    '/js/lib/jquery.metisMenu.min.js',
+    '/js/lib/jquery.slimscroll.min.js',
+    '/js/lib/fc.common.min.js',
     /* FelCraft Application Files */
     // Core
     '/js/lib/felcraft-core.min.js',
@@ -16,7 +19,7 @@ window.startApp = function() { console.error('Oops! No application got loaded!')
     var incrementBy = Math.floor(100 / ((len + 1) * 2));
     var size = 0;
     var previousMessages = [];
-    var transitionTimeout = 260;
+    var transitionTimeout = 300;
     var domReadyTimeout = 25;
 
     var background = document.getElementById('fc-background');
