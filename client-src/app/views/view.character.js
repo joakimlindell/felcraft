@@ -2,6 +2,9 @@
 
     FC.CharacterView = Backbone.View.extend({
         el: '#content',
+        events: {
+          'click .fc-app-menuLink':'menuItemClicked'
+        },
         template: _.template($('#charTemplate').html()),
         initialize: function(newChar) {
             this.model = newChar;
@@ -15,6 +18,15 @@
         },
         verifyChanged: function() {
             this.render(); // re-render
+        },
+        menuItemClicked: function(e) {
+            this.$('#side-menu li').each(function(i) {
+                $(this).removeClass('active');
+            });
+            $('#fc-side-equip-drop').removeClass('in');
+            $('#'+e.target.id).parent().addClass('active');
+            this.$('#fc-app-title').html($('#'+e.target.id).text());
+
         },
         render: function() {
 
