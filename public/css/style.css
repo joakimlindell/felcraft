@@ -302,10 +302,10 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 .pace-done li.active,
 .pace-done #page-wrapper,
 .pace-done .footer {
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
 .navbar-fixed-top {
   background: #fff;

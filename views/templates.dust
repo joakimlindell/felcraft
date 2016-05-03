@@ -37,7 +37,7 @@
                     <a id="fc-side-artifacts" class="fc-app-menuLink"><i class="fa fa-magic"></i> <span class="nav-label">Artifact</span></a>
                 </li>
                   <li>
-                    <a id="fc-side-sim" class="fc-app-menuLink"><i class="fa fa-flask"></i> <span class="nav-label">Simulation</span></a>
+                    <a id="fc-side-sim" class="fc-app-menuLink"><i class="fa fa-flask"></i> <span class="nav-label">Simulation</span><span class="pull-right label label-primary">NYI</span></a>
                 </li>
                    <li>
                     <a id="fc-side-breakdown" class="fc-app-menuLink"><i class="fa fa-pie-chart"></i> <span class="nav-label">Breakdown</span></a>
