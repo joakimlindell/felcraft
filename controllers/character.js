@@ -32,8 +32,7 @@ exports.verifyExists = function(req, res) {
         fields: ['profile', 'items', 'talents', 'stats']
     }, function(err, body, response) {
         
-        // TODO: Replace Blood with Havoc.
-        body.talents = normaliseCalcTalent(findCalcTalentByClassSpec("Blood", body.talents));
+        body.talents = normaliseCalcTalent(findCalcTalentByRole("DPS", body.talents));
 
         if(body.detail === "Account Inactive" && body.type === "Forbidden") {
             console.log("API key does not seem to be configured. Please setup config/local.js");
@@ -47,17 +46,15 @@ exports.verifyExists = function(req, res) {
         }
     });
     
-    /* Normalise talent data from Battle.net API for Felcraft
+    /* Splits talent data from Battle.net API for Felcraft
      * Example:
      * string calcTalent = "1000002" 
      * converts into:
-     * Array  arrTalents = [[0,1,0],[1,0,0]...[0,0,1]]  */
+     * Array  arrTalents = [1,0,0,0,0,0,2]  */
     function normaliseCalcTalent(calcTalent) {
         var arrTalents = new Array(); 
         for (x=0; x<calcTalent.length; x++) {
-            var tempArr = [0,0,0];
-	    tempArr[calcTalent[x]]=1;
-            arrTalents.push(tempArr);
+            arrTalents.push(parseInt(calcTalent[x]));
         }                  
     	return arrTalents;
     }
@@ -74,9 +71,26 @@ exports.verifyExists = function(req, res) {
               return dataTalentArr[x].calcTalent;
             } 
         }
-        console.log("Failed to find talent distribution.");
+        console.log("Failed to find talent distribution with spec ", spec);
         return "0000000"; //failback
     }
+
+    /* Finds the calcTalent string from the first role matching given name 
+     * Example:
+     * string spec = "DPS" 
+     * dataTalentArr[] expected to contain talents array from
+     * the Battle.net API. 
+     * */
+    function findCalcTalentByRole(role, dataTalentArr) {
+        for(x=0; x<dataTalentArr.length; x++) {
+            if(dataTalentArr[x].spec.role === role) {
+              return dataTalentArr[x].calcTalent;
+            } 
+        }
+        console.log("Failed to find talent distribution for role ", role);
+        return "0000000"; //failback
+    }
+
 
     // temporary always OK response
     //res.status(200).send({ 'message': 'OK' });
