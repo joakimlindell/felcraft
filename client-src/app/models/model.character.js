@@ -8,9 +8,9 @@
             isVerified: false,
             options: [],
             stats: [],
-            items: [],
-            talents: [],
-            glyphs: [],
+            talents: [[0,0,0]],
+            glyphs: [12413, 42141, 2141],
+            equipment: [[1, 12215]],
             last_optimised: null
         },
         verify: function() {
@@ -22,7 +22,7 @@
                     model.set({ 
                       'options': { 'level': data.level, 'class': data.class, 'faction': data.faction, 'race': data.race }, 
                       'stats': data.stats,
-                      'items': data.items,
+                      'equipment': data.items,
                       'talents': data.talents,
                     });
                     console.log("Character confirmed. OK!");
