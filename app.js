@@ -16,7 +16,7 @@ var characterController = require('./controllers/character');
 app.get('/', commonController.index);
 
 // Character Routes
-app.get('/character/verify', characterController.verifyExists);
+app.get('/character/verify/:region/:server/:name', characterController.verifyExists);
 
 app.listen(app.get('port'), function() {
   console.log('FelCraft Running on ' + app.get('port'));
