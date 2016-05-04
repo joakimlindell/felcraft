@@ -204,6 +204,7 @@
 
   <h2>EQUIPMENT SUBVIEW</h2>
   <%= equipment %>
+  <a href="//www.wowhead.com/item=25697" class="q3" rel="gems=23121&amp;ench=2647&amp;pcs=25695:25696:25697">[Felstalker Bracers]</a>
 </script>
 <!-- END EQUIPMENT SUBVIEW -->
 
