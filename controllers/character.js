@@ -32,12 +32,10 @@ exports.verifyExists = function(req, res) {
         fields: ['profile', 'items', 'talents', 'stats']
     }, function(err, body, response) {
 
-        if (!body.status && !body.reason) {
-	    
-            /* TODO: Enum definition relpacements */
-            /*body.className = engine.common.definitions.Class(body.class);
-            body.raceName = engine.common.definitions.Race(body.race); */
-
+        if(body.detail === "Account Inactive" && body.type === "Forbidden") {
+          console.log("API key does not seem to be configured. Please setup config/local.js");
+          res.status(403).send({ "type": body.type, "detail": body.detail });
+        } else if (!body.status && !body.reason) {
             res.status(200).send(body);
         } else if (body.reason === "Character not found.") {
             res.status(404).send({ "status": body.status, "reason": body.reason });
