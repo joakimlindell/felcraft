@@ -23,7 +23,7 @@
                     <a id="fc-side-overview" class="fc-app-menuLink"><i class="fa fa-th-large"></i> <span class="nav-label">Overview</span></a>
                 </li>
                 <li>
-                    <a id="fc-side-equip"  class="fc-app-menuLink"><i class="fa fa-male"></i> <span class="nav-label">Equipment</span><span class="fa arrow"></span></a>
+                    <a id="fc-side-equipment"  class="fc-app-menuLink"><i class="fa fa-male"></i> <span class="nav-label">Equipment</span><span class="fa arrow"></span></a>
                     <ul id="fc-side-equip-drop" class="nav nav-second-level collapse">
                         <li><a href="#"><i class="fa fa-diamond"></i> Optimise Gems</a></li>
                         <li><a href="#"><i class="fa fa-flash"></i> Optimise Enchants</a></li>
@@ -81,20 +81,22 @@
 
             </nav>
         </div>
-        <div class="row wrapper white-bg border-bottom page-heading">
-                <div class="col-lg-10">
-                    <h2 id="fc-app-title">Overview</h2>
+        <div id="page-content">
+            <div class="row wrapper white-bg border-bottom page-heading">
+                    <div class="col-lg-10">
+                        <h2 id="fc-app-title">Overview</h2>
 
+                    </div>
+                    <div class="col-lg-2">
+
+                    </div>
                 </div>
-                <div class="col-lg-2">
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center m-t-lg">
 
-                </div>
-            </div>
-        <div class="wrapper wrapper-content animated fadeInRight">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center m-t-lg">
-
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,3 +190,20 @@
     </div>
 </script>
 <!-- NEW CHAR SPLASH TEMPLATE ENDS -->
+
+<!-- TALENTS SUBVIEW -->
+<script id="talentsTemplate" type="text/template">
+
+  <h2>TALENTS SUBVIEW</h2>
+  <%= talents %> <%= glyphs %>
+</script>
+<!-- END TALENTS SUBVIEW -->
+
+<!-- EQUIPMENT SUBVIEW -->
+<script id="equipmentTemplate" type="text/template">
+
+  <h2>EQUIPMENT SUBVIEW</h2>
+  <%= equipment %>
+</script>
+<!-- END EQUIPMENT SUBVIEW -->
+

@@ -7,8 +7,9 @@
             name: 'coryn',
             isVerified: false,
             items: [],
-            talents: [],
-            glyphs: [],
+            talents: [[0,0,0]],
+            glyphs: [12413, 42141, 2141],
+            equipment: [[1, 12215]],
             last_optimised: null
         },
         verify: function() {

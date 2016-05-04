@@ -21,6 +21,10 @@ module.exports = function(grunt) {
             css: {
                 src: 'public/css/felcraft.css',
                 dest: 'public/css/felcraft.min.css'
+            },
+            vcss: {
+                src: 'public/css/style.css',
+                dest: 'public/css/style.min.css'
             }
         },
         uglify: {

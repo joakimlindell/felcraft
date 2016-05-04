@@ -10,9 +10,7 @@ _.extend(window, {
         this.collection_instances = {};
         this.main_ele = '#content';
         this.default_route = 'new';
-        this.connected = false;
-        this.appKey = '';
-        this.CDN = '';
+        this.character = null;
     };
 
     FC.prototype = {

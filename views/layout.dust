@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="/css/animate.css" />
     <link rel="stylesheet" href="/css/felcraft.min.css" />
+
+    <!-- WOWHEAD TOOLTIP API -->
+    <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script>
+    <script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
   </head>
   <body class="md-skin pace-done">
     {+body /}

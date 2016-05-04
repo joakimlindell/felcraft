@@ -39,8 +39,8 @@ window.startApp = function() { console.error('Oops! No application got loaded!')
         'Slapping Target Dummy',
         'Charging Eye lazers',
         'Power levels surpassing 9000',
-        'Khaaaaaaaaaaaaaaaaaannn!',
-        'I am a leaf on the wind',
+        'Gliiiiiiiiiide!',
+        'Sharpening glaives',
         'Popping Metamorphosis',
         'Spamming Fel Blade',
         'There is no spoon',
@@ -73,7 +73,7 @@ window.startApp = function() { console.error('Oops! No application got loaded!')
             loader.style.opacity = 0;
             background.style.zIndex = 1;
             document.getElementById('fc-background').style.opacity = 1;
-            loadjscssfile("/css/style.css","css");  // Temporary CSS injection
+            loadjscssfile("/css/style.min.css","css");  // Temporary CSS injection
 
             /* INITIALIZE FRONTEND */
             var FelCraft = new window.FC();
